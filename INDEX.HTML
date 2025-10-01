@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website with Navbar</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+  }
+  /* Navbar styling */
+  nav {
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  nav .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    margin-left: 20px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 5px;
+  }
+  nav ul li a:hover {
+    background: rgba(255,255,255,0.2);
+  }
+
+  /* Responsive toggle */
+  .menu-btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #4CAF50;
+    }
+    nav ul li {
+      margin: 10px 0;
+      text-align: center;
+    }
+    .menu-btn {
+      display: block;
+    }
+  }
+  #home {
+    padding: 50px;
+    text-align: center;
+    background:white;
+    color:black;
+    height: 500px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">MyWebsite</div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <ul id="menu">
+    <li><a href="/INDEX.HTML">HOME</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/login.html">Login</a></li>
+  </ul>
+</nav>
+
+<section id="home">
+  <h1>Welcome to Home Page</h1>
+  <p>This is the Home section.</p>
+</section>
+
+<section id="about" style="padding:50px;text-align:center;background:black; color:white; height:20px0px;">
+  <h1>@2025 my life website</h1>
+  <p>privacy policy | persional use.</p>
+</section>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    if(menu.style.display === 'flex'){
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+  }
+</script>
+
+</body>
+</html>
